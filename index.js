@@ -1,4 +1,6 @@
-import path from 'path';
+const join = require('path').join;
 
-export const include = `"${__dirname}"./src`;
-export const gyp = path.join(__dirname, './binding.gyp:napi-threadsafe-deferred');
+module.exports = {
+    include: `"${__dirname}"./src`,
+    gyp: join(__dirname, './binding.gyp:napi-threadsafe-deferred')
+};
