@@ -1,0 +1,36 @@
+{
+  "name": "napi-threadsafe-deferred",
+  "version": "0.0.0",
+  "description": "A thread-safe variant of a Napi-Promise which can be resolved from any thread.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0815fox/node-napi-threadsafe-deferred.git"
+  },
+  "keywords": [
+    "napi",
+    "deferred",
+    "promise",
+    "thread",
+    "safe",
+    "async"
+  ],
+  "author": "0815fox (Michael Kriegel)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0815fox/node-napi-threadsafe-deferred/issues"
+  },
+  "homepage": "https://github.com/0815fox/node-napi-threadsafe-deferred#readme",
+  "devDependencies": {
+    "node-addon-api": "^3.0.0",
+    "node-gyp": "^7.0.0"
+  },
+  "files": [
+    "/src/*",
+    "/binding.gyp",
+    "/index.js"
+  ]
+}
