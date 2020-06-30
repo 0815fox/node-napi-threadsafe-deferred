@@ -26,10 +26,10 @@ public:
 	inline Napi::Promise Promise() const {return this->Promise();}
 	inline Napi::Env Env() const {return this->deferred.Env();}
 
-	void Resolve(); // <- if only Resolve were virtual... But we can live without polymorphism here
+	void Resolve();
 	void Resolve(const createValueCb_t);
 	inline void Reject() {this->Reject("");}
-	void Reject(const std::string &); // <- if only Reject were virtual... But we can live without polymorphism here
+	void Reject(const std::string &);
 };
 
 #endif /* __THREADSAFE_DEFERRED_HPP */
