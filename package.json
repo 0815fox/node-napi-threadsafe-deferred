@@ -1,6 +1,6 @@
 {
   "name": "napi-threadsafe-deferred",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A thread-safe variant of a Napi-Promise which can be resolved from any thread.",
   "main": "index.js",
   "scripts": {
