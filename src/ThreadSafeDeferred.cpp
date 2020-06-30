@@ -1,7 +1,7 @@
 #include "ThreadSafeDeferred.hpp"
 
 ThreadSafeDeferred::ThreadSafeDeferred(const Napi::Env env)
-: deferred(env)
+: Deferred(env)
 , fate(EFate::UNRESOLVED)
 , createValueCb(NULL)
 , errorMsg("")
@@ -13,12 +13,12 @@ ThreadSafeDeferred::ThreadSafeDeferred(const Napi::Env env)
 		// anymore after calling Resolve or Reject.
 		if (this->fate == EFate::RESOLVED) {
 			if (this->createValueCb == NULL) {
-				deferred.Resolve(env.Undefined());
+				Napi::Promise::Deferred::Resolve(env.Undefined());
 			} else {
-				deferred.Resolve(this->createValueCb(env));
+				Napi::Promise::Deferred::Resolve(this->createValueCb(env));
 			}
 		} else {
-			deferred.Reject(Napi::Error::New(env, this->errorMsg).Value());
+			Napi::Promise::Deferred::Reject(Napi::Error::New(env, this->errorMsg).Value());
 		}
 		try {
 			delete this;
