@@ -9,6 +9,9 @@
       "include_dirs": [
         "<!@(node -p \"require('node-addon-api').include\")",
       ],
+      "dependencies": [
+        "<!(node -p \"require('node-addon-api').gyp\")"
+      ],
       'xcode_settings': {
         'OTHER_CFLAGS': [
           "-std=c++11"

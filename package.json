@@ -26,12 +26,14 @@
   },
   "homepage": "https://github.com/0815fox/node-napi-threadsafe-deferred#readme",
   "devDependencies": {
-    "node-addon-api": "^3.0.0",
     "node-gyp": "^7.0.0"
   },
   "files": [
     "/src/*",
     "/binding.gyp",
     "/index.js"
-  ]
+  ],
+  "dependencies": {
+    "node-addon-api": "^3.0.0"
+  }
 }
